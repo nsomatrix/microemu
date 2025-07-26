@@ -32,14 +32,14 @@ This version of MicroEmulator uses Gradle as its build system.
 2.  **Build the entire project:**
     To compile all modules and generate their respective JAR files, run the following command from the project root directory:
     ```bash
-    gradle build
+    ./gradlew build
     ```
     This command will download necessary dependencies, compile the source code, and package the modules.
 
 3.  **Run only the desktop application JAR:**
     If you only need the runnable desktop application :
     ```bash
-    gradle run
+    ./gradlew run
     ```
 
 ## Running the Desktop Application
