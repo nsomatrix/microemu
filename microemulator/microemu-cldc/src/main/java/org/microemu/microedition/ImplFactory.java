@@ -129,7 +129,7 @@ public class ImplFactory {
 				public Object run() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 					Class implClass = ImplFactory.class.getClassLoader().loadClass(implClassName);
 					try {
-						implClass.getConstructor(null);
+						implClass.getConstructor((Class[]) null);
 					} catch (NoSuchMethodException e) {
 						throw new InstantiationException("No default constructor in class " + implClassName);
 					}

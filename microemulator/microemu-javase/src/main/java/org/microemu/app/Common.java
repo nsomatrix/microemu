@@ -705,7 +705,7 @@ public class Common implements MicroEmulator, CommonInterface {
                 boolean isStatic = true;
                 try {
                     // Create and object or call static initializer instance();
-                    Constructor c = implClass.getConstructor(null);
+                    Constructor c = implClass.getConstructor((Class<?>[]) null);
                     if (Modifier.isPublic(c.getModifiers())) {
                         isStatic = false;
                         implClass.newInstance();
@@ -715,9 +715,9 @@ public class Common implements MicroEmulator, CommonInterface {
 
                 if (isStatic) {
                     try {
-                        Method getinst = implClass.getMethod("instance", null);
+                        Method getinst = implClass.getMethod("instance", (Class<?>[]) null);
                         if (Modifier.isStatic(getinst.getModifiers())) {
-                            getinst.invoke(implClass, null);
+                            getinst.invoke(implClass, (Object[]) null);
                         } else {
                             Logger.debug("No known way to initialize implementation class");
                         }

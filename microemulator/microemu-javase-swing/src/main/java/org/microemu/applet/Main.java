@@ -294,8 +294,8 @@ public class Main extends Applet implements MicroEmulator {
 		// TODO handle this through ImplementationInitialization.notifyMIDletDestroyed()
 		try {
             Class managerClass = Class.forName("javax.microedition.media.Manager");
-            Method cleanupMethod = managerClass.getMethod("cleanupMedia", null);
-            cleanupMethod.invoke(null, null);
+            Method cleanupMethod = managerClass.getMethod("cleanupMedia", (Class[]) null);
+            cleanupMethod.invoke(null, (Object[]) null);
         } catch (Exception e) {
             e.printStackTrace();
         }
