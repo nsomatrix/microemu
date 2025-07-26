@@ -1,4 +1,5 @@
-# MicroEmulator
+<img width="295" height="37" alt="MicroEmulator-logo" src="https://github.com/user-attachments/assets/114843cc-baaf-417c-900d-17a7792430e8" />
+
 
 MicroEmulator is a free, open-source emulator for J2ME (Java 2 Platform, Micro Edition) applications. It allows you to run MIDP (Mobile Information Device Profile) applications and games on your desktop computer.
 
@@ -14,7 +15,7 @@ This repository contains the source code for various MicroEmulator modules, incl
 
 ## Building the Project
 
-MicroEmulator uses Gradle as its build system.
+This version of MicroEmulator uses Gradle as its build system.
 
 ### Prerequisites
 
@@ -25,24 +26,21 @@ MicroEmulator uses Gradle as its build system.
 
 1.  **Clone the repository (if you haven't already):**
     ```bash
-    git clone https://github.com/microemulator/microemulator.git
-    cd microemulator
+    git clone https://github.com/nsomatrix/microemu.git
     ```
-    *(Note: Assuming you are already in the project root `/home/manish/project/microemu`)*
 
 2.  **Build the entire project:**
     To compile all modules and generate their respective JAR files, run the following command from the project root directory:
     ```bash
-    ./gradlew build
+    gradle build
     ```
     This command will download necessary dependencies, compile the source code, and package the modules.
 
-3.  **Build only the desktop application JAR:**
-    If you only need the runnable desktop application, you can build just that module:
+3.  **Run only the desktop application JAR:**
+    If you only need the runnable desktop application :
     ```bash
-    ./gradlew :microemulator:microemu-javase-swing:jar
+    gradle run
     ```
-    This command will ensure all necessary dependencies for the `microemu-javase-swing` module are built and included in its JAR.
 
 ## Running the Desktop Application
 
@@ -63,8 +61,9 @@ This will launch the MicroEmulator GUI, allowing you to load and run J2ME applic
 
 ## Resources
 
-*   **Official Website (if applicable):** [Insert official website link here if one exists, otherwise remove]
-*   **Source Code:** [https://github.com/microemulator/microemulator](https://github.com/microemulator/microemulator) (This repository)
+*   **Source Code:** [https://github.com/nsomatrix/microemu](https://github.com/nsomatrix/microemu) (This repository)
+*   **Original Code:** [https://github.com/barteo/microemu](https://github.com/barteo/microemu) (This repository)
+
 
 ## Contributing
 
