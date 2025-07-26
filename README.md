@@ -61,8 +61,8 @@ This will launch the MicroEmulator GUI, allowing you to load and run J2ME applic
 
 ## Resources
 
-*   **Source Code:** [https://github.com/nsomatrix/microemu](https://github.com/nsomatrix/microemu) (This repository)
-*   **Original Code:** [https://github.com/barteo/microemu](https://github.com/barteo/microemu) (This repository)
+*   **Source Code:** [https://github.com/nsomatrix/microemu](https://github.com/nsomatrix/microemu)
+*   **Original Code:** [https://github.com/barteo/microemu](https://github.com/barteo/microemu)
 
 
 ## Contributing
