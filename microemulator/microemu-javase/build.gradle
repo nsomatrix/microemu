@@ -1,0 +1,8 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':microemulator:microemu-midp')
+    api project(':microemulator:api')
+    api project(':microemulator:microemu-cldc')
+    implementation 'asm:asm:3.1' // Assuming version 3.1 based on common usage with older projects
+}

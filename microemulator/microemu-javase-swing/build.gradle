@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+apply plugin: 'application'
+
+dependencies {
+    api project(':microemulator:microemu-javase')
+    implementation project(path: ':microemulator:microemu-injected', configuration: 'inject')
+}
+
+mainClassName = 'org.microemu.app.Main'
+
+jar {
+    dependsOn ':microemulator:microemu-javase:jar', ':microemulator:microemu-midp:jar', ':microemulator:api:jar', ':microemulator:microemu-cldc:jar'
+    manifest {
+        attributes 'Main-Class': 'org.microemu.app.Main'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    api project(':microemulator:microemu-midp')
+    api project(':microemulator:api:cldcapi11')
+}
